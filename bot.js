@@ -3,13 +3,15 @@ const Discord = require('discord.js')
 require('dotenv').config()
 const client = new Discord.Client()
 
+const UNFLIPS = ['┬─┬ ノ( ゜-゜ノ)', '┳━┳ ヽ(ಠل͜ಠ)ﾉ', '┬─┬ ಠ_ಠᕗ']
+
 client.on('ready', () => {
   client.user.setActivity('flipping tables', { type: 'WATCHING' })
 })
 
 client.on('message', (message) => {
   if (message.author.bot) return
-  if (message.content === '(╯°□°）╯︵ ┻━┻') message.channel.send('┬─┬ ノ( ゜-゜ノ)')
+  if (message.content === '(╯°□°）╯︵ ┻━┻') message.channel.send(Math.floor(Math.random() * UNFLIPS.length))
 })
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN)

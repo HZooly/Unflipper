@@ -9,3 +9,7 @@ To get the Bot invitation link, you can use [discord-bot-invitation](https://git
 ## Configuration
 
 Copy `.env.sample` in `.env` and fill your Discord Token
+
+## Contribute
+
+You can add more ASCII Unflippers to the bot by adding entry in the UNFLIPS array.
