@@ -11,7 +11,7 @@ client.on('ready', () => {
 
 client.on('message', (message) => {
   if (message.author.bot) return
-  if (message.content === '(╯°□°）╯︵ ┻━┻') message.channel.send(Math.floor(Math.random() * UNFLIPS.length))
+  if (message.content === '(╯°□°）╯︵ ┻━┻') message.channel.send(UNFLIPS[Math.floor(Math.random() * UNFLIPS.length)])
 })
 
 client.login(process.env.DISCORD_TOKEN)
